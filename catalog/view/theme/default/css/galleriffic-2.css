@@ -1,0 +1,197 @@
+div.content {
+	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+	
+}
+div.content a, div.navigation a {
+	text-decoration: none;
+	color: #777;
+}
+
+
+div.controls {
+	position: absolute;
+	width: 960px;
+	z-index: 10;
+}
+div.controls a {
+	padding: 20px;
+}
+div.ss-controls {
+	float: left;
+}
+div.nav-controls {
+	width: 100%;
+	z-index: 1000;
+}
+.prev{
+	left: 0px;
+	position: absolute;
+	font-size:30px;
+	font-weight: bold;
+	top:220px;
+	color: #fff !important;
+}
+.prev:hover{
+	text-decoration: none !important;
+	color: #30d5c8 !important;	
+}
+
+.next{
+	right: 0px;
+	position: absolute;
+	font-size:30px;
+	font-weight: bold;
+	top:220px;
+	color: #fff !important;
+}
+.next:hover{
+	text-decoration: none !important;
+	color: #30d5c8 !important;
+}
+
+div.slideshow-container {
+	position: relative;
+	clear: both;
+	height: 520px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+div.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('loader.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 960px;
+	height: 480px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+div.slideshow {
+	
+}
+div.slideshow span.image-wrapper {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+div.slideshow span.image-wrapper.previuos{
+	display: none;
+	opacity: 0 !important;
+}
+div.slideshow a.advance-link {
+	overflow: hidden;
+	display: block;
+	width: 960px;
+	height: 480px; /* This should be set to be at least the height of the largest image in the slideshow */
+	line-height: 0px; /* This should be set to be at least the height of the largest image in the slideshow */
+	text-align: center;
+}
+div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
+	text-decoration: none;
+}
+div.slideshow img {
+	vertical-align: middle;
+	border: 1px solid #ccc;
+}
+div.download {
+	float: right;
+}
+div.caption-container {
+	position: relative;
+	clear: left;
+	height: 75px;
+}
+span.image-caption {
+	display: block;
+	position: absolute;
+	width: 960px;
+	top: 0;
+	left: 0;
+}
+div.caption {
+	padding: 12px;
+}
+div.image-title {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+div.image-desc {
+	line-height: 1.3em;
+	padding-top: 12px;
+}
+div.navigation {
+	/* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+}
+ul.thumbs {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	width: 960px;
+	overflow: hidden;
+}
+ul.thumbs li {
+	float: left;
+	padding: 0;
+	margin: 5px 0px 5px 0;
+	list-style: none;
+}
+a.thumb {
+	padding: 2px;
+	display: block;
+	border: 1px solid #ccc;
+	
+}
+ul.thumbs li.selected a.thumb {
+	background: #30d5c8;
+}
+a.thumb:focus {
+	outline: none;
+}
+ul.thumbs img {
+	border: none;
+	display: block;
+	width: 154px;
+	height:116px;
+	
+}
+div.pagination {
+	clear: both;
+}
+div.navigation div.top {
+	margin-bottom: 12px;
+	height: 11px;
+}
+div.navigation div.bottom {
+	margin: 28px auto 0;
+	padding: 10px 20px 0px;
+	border-top: 1px solid #30d5c8;
+	height: 32px;
+	display: table;
+}
+div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
+	display: block;
+	float: left;
+	margin-right: 2px;
+	padding: 0;
+	line-height: 32px;
+	width: 32px;
+	background: #30d4c7;
+	color: #fff !important;
+	font-family: 'HelveticaNeueCyr-Bold', sans-serif;
+	font-size: 15px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	text-align:center;
+}
+div.pagination a:hover {
+	background-color: #919191;
+	text-decoration: none;
+}
+div.pagination span.current {
+	font-weight: bold;
+	background-color: #919191;
+	
+	
+}
+div.pagination span.ellipsis {
+	border: none;
+	padding: 5px 0 3px 2px;
+}

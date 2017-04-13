@@ -1,0 +1,70 @@
+﻿<modification>
+	<id>Product Details: Unit Display</id>
+	<version>1.1</version>
+	<vqmver>2.1.6</vqmver>
+	<author>real-com@ukr.net</author>		
+
+	<file name="catalog/controller/product/product.php">
+		<operation>
+			<search position="before">
+				<![CDATA[$this->document->setDescription($product_info['meta_description']);]]>
+			</search>
+			<add>
+				<![CDATA[$this->load->model('catalog/dimension');
+			$dim=$this->model_catalog_dimension->getDimension($product_info['length_class_id']);
+			$this->data['dimension'] = $dim['unit'];]]>
+			</add>
+		</operation>
+	</file>	
+	<file name="catalog/controller/product/product.php">
+		<operation>
+			<search position="after">
+				<![CDATA[$this->data['text_select'] = $this->language->get('text_select');]]>
+			</search>
+			<add>
+				<![CDATA[$this->data['text_unit'] = $this->language->get('text_unit');
+			]]>
+			</add>
+		</operation>
+	</file>	
+	
+	<file name="catalog/language/ukrainian/product/product.php">
+		<operation>
+			<search position="before">
+				<![CDATA[?>]]>
+			</search>
+			<add>
+				<![CDATA[$_['text_unit'] = '';]]>
+			</add>
+		</operation>
+	</file>	
+	<file name="catalog/language/russian/product/product.php">
+		<operation>
+			<search position="before">
+				<![CDATA[?>]]>
+			</search>
+			<add>
+				<![CDATA[$_['text_unit'] = '';]]>
+			</add>
+		</operation>
+	</file>	
+	<file name="catalog/language/english/product/product.php">
+		<operation>
+			<search position="before">
+				<![CDATA[?>]]>
+			</search>
+			<add>
+				<![CDATA[$_['text_unit'] = '';]]>
+			</add>
+		</operation>
+	</file>	
+	
+<file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation>
+			<search position="after">
+				<![CDATA[<div class="price">]]></search>
+			<add>
+			<![CDATA[<div class="unit"><?php echo $text_unit; ?><?php echo $dimension; ?></div>]]></add>
+		</operation>
+	</file>		
+</modification>

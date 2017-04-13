@@ -1,0 +1,79 @@
+﻿<modification>
+	<id>Product Details: Unit Display</id>
+	<version>1.1</version>
+	<vqmver>2.1.6</vqmver>
+	<author>real-com@ukr.net</author>		
+
+	<file name="catalog/controller/product/category.php">
+		<operation>
+			<search position="before">
+				<![CDATA[$this->data['products'][] = array(]]>
+			</search>
+			<add>
+				<![CDATA[$this->load->model('catalog/dimension');]]>
+			</add>
+		</operation>
+	</file>	
+	
+	<file name="catalog/controller/product/category.php">
+		<operation>
+			<search position="after">
+				<![CDATA['href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'])]]>
+			</search>
+			<add>
+				<![CDATA[, 'length_class_id'       => $result['length_class_id'],
+					'dimension' => $this->model_catalog_dimension->getDimension($result['length_class_id'])]]>
+			</add>
+		</operation>
+	</file>	
+	<file name="catalog/controller/product/category.php">
+		<operation>
+			<search position="after">
+				<![CDATA[$this->data['button_continue'] = $this->language->get('button_continue');]]>
+			</search>
+			<add>
+				<![CDATA[$this->data['text_unit'] = $this->language->get('text_unit');
+			]]>
+			</add>
+		</operation>
+	</file>	
+	
+	<file name="catalog/language/ukrainian/product/category.php">
+		<operation>
+			<search position="before">
+				<![CDATA[$_['text_refine']]]>
+			</search>
+			<add>
+				<![CDATA[$_['text_unit'] = '';]]>
+			</add>
+		</operation>
+	</file>	
+	<file name="catalog/language/russian/product/category.php">
+		<operation>
+			<search position="before">
+				<![CDATA[$_['text_refine']]]>
+			</search>
+			<add>
+				<![CDATA[$_['text_unit'] = '';]]>
+			</add>
+		</operation>
+	</file>	
+	<file name="catalog/language/english/product/category.php">
+		<operation>
+			<search position="before">
+				<![CDATA[$_['text_refine']]]>
+			</search>
+			<add>
+				<![CDATA[$_['text_unit'] = '';]]>
+			</add>
+		</operation>
+	</file>	
+<file name="catalog/view/theme/*/template/product/category.tpl">
+		<operation>
+			<search position="before">
+		<![CDATA[<div class="price">]]></search>
+			<add>
+				<![CDATA[<div class="unit"><?php echo $text_unit; ?><?php echo $product['dimension']['unit']; ?></div>]]></add>
+		</operation>
+	</file>		
+</modification>

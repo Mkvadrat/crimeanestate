@@ -1,0 +1,364 @@
+/* 
+ * Selecter v3.2.4 - 2015-04-04 
+ * A jQuery plugin for replacing default select elements. Part of the Formstone Library. 
+ * http://classic.formstone.it/selecter/ 
+ * 
+ * Copyright 2015 Ben Plum; MIT Licensed 
+ */
+.selecter {
+	position: relative;
+	display: block;
+	margin: 10px 3px;
+	z-index: 100;
+	width: 198px;
+	height: 36px;
+	float: left;
+	font-family: 'HelveticaNeueCyr-Light', sans-serif;
+}
+.s5 {
+	position: relative;
+	display: block;
+	margin: 0px 3px;
+	margin-right: 10px;
+	z-index: 2;
+	width: 120px;
+	height: 20px;
+	float: left;
+}
+.s6 {
+	position: relative;
+	display: block;
+	margin: 0px 3px;
+	z-index: 2;
+	width: 31px;
+	height: 20px;
+	float: left;
+}
+.selecter:focus {
+  box-shadow: none;
+  outline: none;
+}
+.selecter,
+.selecter * {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+}
+.selecter,
+.selecter *,
+.selecter *:before,
+.selecter *:after {
+  box-sizing: border-box;
+}
+.selecter-element {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+	border-radius: 5px;
+}
+.s5 .selecter-element, .s6 .selecter-element {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  border-radius: 0px;
+}
+.selecter-element,
+.selecter-element:focus {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.no-opacity .selecter-element {
+  left: -999999px;
+}
+.selecter-selected {
+  position: relative;
+  background: #ffffff;
+  color: #222222;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  margin: 0;
+  overflow: hidden;
+  padding: 10px 15px;
+  text-overflow: clip;
+  z-index: 2;
+  border-radius: 5px;
+}
+ .s5 .selecter-selected, .s6 .selecter-selected {
+  position: relative;
+  background: #ffffff;
+  color: #42d7cb;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  margin: 0;
+  overflow: hidden;
+  padding: 3px 3px;
+  text-overflow: clip;
+  z-index: 2;
+  border-radius: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.selecter-selected:after {
+  height: 9px;
+  width: 5px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  content: '';
+  display: block;
+  margin: auto 0;
+	background: url(../img/sel-strel.png) center no-repeat;
+}
+.s5 .selecter-selected:after, .s6 .selecter-selected:after {
+  height: 20px;
+  width: 15px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  bottom: 0px;
+  content: '';
+  display: block;
+  margin: auto 0;
+  background: url(../img/arrow3.png) 0px 0px no-repeat;
+}
+.no-touch .selecter-selected:hover {
+  color: #333333;
+}
+.no-touch .selecter.disabled .selecter-selected:hover {
+  color: #cccccc;
+}
+.selecter-options {
+  width: 98%;
+  max-height: 260px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  display: none;
+  margin: -2px 0 0 2px;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 0;
+  z-index: 50;
+  border-radius: 0 0 0 0;
+  box-shadow: 0px 0px 5px 0.00px rgba(1, 1, 1, 0.4);
+	-webkit-box-shadow: 0px 0px 5px 0.00px rgba(1, 1, 1, 0.4);
+	-moz-box-shadow: 0px 0px 5px 0.00px rgba(1, 1, 1, 0.4);
+}
+.s5 .selecter-options, .s6 .selecter-options {
+  width: 200px;
+  max-height: 260px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  display: none;
+  margin: 0px 0 0 -2px;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 0;
+  z-index: 50;
+  border-radius: 0 0 0 0;
+  box-shadow: 0px 0px 5px 0.00px rgba(1, 1, 1, 0.4);
+	-webkit-box-shadow: 0px 0px 5px 0.00px rgba(1, 1, 1, 0.4);
+	-moz-box-shadow: 0px 0px 5px 0.00px rgba(1, 1, 1, 0.4);
+}
+.s6 .selecter-options {
+	width: 50px;
+}
+.selecter-options.scroller {
+  position: absolute;
+}
+.no-opacity .selecter-options {
+  width: auto;
+}
+.selecter-group {
+  border-bottom: 1px solid #cccccc;
+  color: #999999;
+  display: block;
+  font-size: 14px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+.selecter-item {
+  width: 100%;
+  background: #ffffff;
+  color: #222222;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  margin: 0;
+  overflow: hidden;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+.s5 .selecter-item, .s6 .selecter-item {
+  width: 100%;
+  background: #ffffff;
+  color: #222222;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  margin: 0;
+  overflow: hidden;
+  padding: 5px 5px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+.selecter-item:hover {
+	background: #f7f7f7;
+}
+.s5 .selecter-item:hover, .s6 .selecter-item:hover {
+	background: none;
+	color:#42d7cb;
+}
+.selecter-item.placeholder {
+  display: none;
+}
+.selecter-item.selected {
+  background: #eeeeee;
+}
+.s5 .selecter-item.selected, .s6 .selecter-item.selected {
+  background: none;
+	color:#42d7cb;
+}
+.selecter-item.disabled {
+  color: #999999;
+  cursor: default;
+}
+.selecter-item:first-child {
+  border-radius: 0;
+}
+.selecter-item:last-child {
+  border-bottom: 0;
+  border-radius: 0 0 2px 2px;
+}
+.no-touch .selecter-item:hover,
+.no-touch .selecter-item.selected:hover {
+  color: #333333;
+  background-color: #cccccc;
+}
+.selecter-item.disabled,
+.no-touch .selecter-item.disabled:hover {
+  color: #cccccc;
+  background-color: #ffffff;
+}
+.selecter.open {
+  z-index: 3;
+}
+.selecter.open .selecter-selected {
+  z-index: 51;
+  border-radius: 5px 5px 5px 5px;
+	background-color: #55ddd2;
+	border: 2px solid #fff;
+	color: #fff;
+}
+.s5.open .selecter-selected, .s6.open .selecter-selected {
+  z-index: 51;
+  border-radius: 0;
+	background-color: #fff;
+	border: none;
+	color:#42d7cb;
+}
+.selecter.open .selecter-selected:after {
+	width: 9px;
+	height: 5px;
+	background: url(../img/sel-srel2.png) center no-repeat;
+}
+.s5.open .selecter-selected:after, .s6.open .selecter-selected:after {
+	width: 15px;
+	height: 20px;
+	background: url(../img/arrow3.png) 0px -20px no-repeat;
+}
+.selecter.open .selecter-selected,
+.selecter.focus .selecter-selected {
+  
+}
+.selecter.cover .selecter-options {
+  border-width: 1px;
+  top: 0;
+  border-radius: 5px;
+}
+.selecter.cover .selecter-options .selecter-item.first {
+  border-radius: 5px 5px 5px 5px;
+}
+.selecter.cover.open .selecter-selected {
+  z-index: 49;
+  border-radius: 5px 5px 5px 5px;
+}
+.selecter.bottom .selecter-options {
+  top: 100%;
+  border-width: 0px 0px 0px 0px;
+	box-shadow: 0px 0px 5px 0.00px rgba(1, 1, 1, 0.4);
+}
+.selecter.bottom .selecter-item:last-child {
+  border: none;
+}
+.selecter.bottom.open .selecter-selected {
+  border-radius: 5px 5px 5px 5px;
+}
+.selecter.bottom.open .selecter-options {
+  border-radius: 0 0 0px 0px;
+}
+.selecter.bottom .cover .selecter-options {
+  top: auto;
+  bottom: 0;
+}
+.selecter.bottom .cover.open .selecter-selected {
+  border-radius: 5px;
+}
+.selecter.bottom .cover.open .selecter-options {
+  border-radius: 5px;
+}
+.selecter.multiple .selecter-options {
+  width: 100%;
+  position: static;
+  border-width: 1px;
+  display: block;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.selecter.disabled .selecter-selected {
+  background: #ffffff;
+  border-color: #cccccc;
+  color: #cccccc;
+  cursor: default;
+}
+.selecter.disabled .selecter-options {
+  background: #ffffff;
+  border-color: #cccccc;
+}
+.selecter.disabled .selecter-group,
+.selecter.disabled .selecter-item {
+  border-color: #cccccc;
+  color: #cccccc;
+  cursor: default;
+}
+.selecter.disabled .selecter-item.selected,
+.no-touch .selecter.disabled .selecter-item.selected:hover {
+  background: #fafafa;
+}
+.selecter.disabled .selecter-item,
+.no-touch .selecter.disabled .selecter-item:hover {
+  color: #cccccc;
+  background-color: #ffffff;
+}
+.selecter-options.scroller {
+  overflow: hidden;
+}
+.selecter-options.scroller .scroller-content {
+  max-height: 260px;
+  padding: 0;
+}

@@ -1,0 +1,83 @@
+---------- Date: 2016-12-19 12:25:45 ~ IP : 37.52.51.215 ----------
+REQUEST URI : /sale
+VQMod::_getMods - NO XML FILES READABLE IN XML FOLDER
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-19 12:25:46 ~ IP : 37.52.51.215 ----------
+REQUEST URI : /sale
+VQMod::_getMods - NO XML FILES READABLE IN XML FOLDER
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-19 12:25:47 ~ IP : 37.52.51.215 ----------
+REQUEST URI : /catalog/view/theme/default/css/img/arrow.png
+VQMod::_getMods - NO XML FILES READABLE IN XML FOLDER
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-19 12:25:48 ~ IP : 37.52.51.215 ----------
+REQUEST URI : /index.php?route=module/filterpro/getproducts
+VQMod::_getMods - NO XML FILES READABLE IN XML FOLDER
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-19 12:25:55 ~ IP : 213.133.161.198 ----------
+REQUEST URI : /image/cache/data/11043298/1-445x282.jpg
+VQMod::_parseMods - INVALID XML FILE: : Document is empty in /home/crimean/public_html/vqmod/xml/vqmm_menu_shortcut.xml, line: 1
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-19 12:26:02 ~ IP : 37.52.51.215 ----------
+REQUEST URI : /sale
+MOD DETAILS:
+   modFile   : /home/crimean/public_html/vqmod/xml/category_unit_display.xml
+   id        : Product Details: Unit Display
+   version   : 1.1
+   vqmver    : 2.1.6
+   author    : real-com@ukr.net
+VQModObject::parseMods - Could not resolve path for [catalog/language/ukrainian/product/category.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/language/ukrainian/product/product.php] (SKIPPED)
+MOD DETAILS:
+   modFile   : /home/crimean/public_html/vqmod/xml/faq.xml
+   id        : FAQ for OpenCart 1.5.1.x
+   version   : 1.0.0
+   vqmver    : 1.2.3
+   author    : Fido-X
+
+File Name    : catalog/view/theme/default/template/common/footer.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-19 09:26:55 ~ IP : 37.52.51.215 ----------
+REQUEST URI : /admin/index.php?route=catalog/product&amp;token=a4c081ec8d5376d229a7fd623c65dbad
+MOD DETAILS:
+   modFile   : /home/crimean/public_html/vqmod/xml/admin_theme_base5builder_impulsepro_1.5.4-below.xml
+   id        : Admin Theme - Base 5 Builder - ImpulsePro
+   version   : 1.0.4
+   vqmver    : 2.0
+   author    : Niyi Sodipe - Base5Builder.com
+
+File Name    : admin/view/template/catalog/product_*.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <h1><img src="view/image/product.png" alt="" /> <?php echo $heading_title; ?></h1>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-19 09:27:02 ~ IP : 37.52.51.215 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/update&amp;token=a4c081ec8d5376d229a7fd623c65dbad&amp;product_id=612
+MOD DETAILS:
+   modFile   : /home/crimean/public_html/vqmod/xml/admin_theme_base5builder_impulsepro_1.5.4-below.xml
+   id        : Admin Theme - Base 5 Builder - ImpulsePro
+   version   : 1.0.4
+   vqmver    : 2.0
+   author    : Niyi Sodipe - Base5Builder.com
+
+File Name    : admin/view/template/catalog/product_*.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <h1><img src="view/image/product.png" alt="" /> <?php echo $heading_title; ?></h1>
+
+----------------------------------------------------------------------
+
+

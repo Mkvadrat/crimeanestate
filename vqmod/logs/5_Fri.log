@@ -1,0 +1,15 @@
+---------- Date: 2016-12-09 10:31:51 ~ IP : 46.133.225.173 ----------
+REQUEST URI : /admin/index.php?route=catalog/category/update&amp;token=068e333a36acf65db18f2f22a803e7e2&amp;category_id=64
+MOD DETAILS:
+   modFile   : /home/crimean/public_html/vqmod/xml/admin_theme_base5builder_impulsepro_1.5.4-below.xml
+   id        : Admin Theme - Base 5 Builder - ImpulsePro
+   version   : 1.0.4
+   vqmver    : 2.0
+   author    : Niyi Sodipe - Base5Builder.com
+
+File Name    : admin/view/template/catalog/category_*.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <h1><img src="view/image/category.png" alt="" /> <?php echo $heading_title; ?></h1>
+
+----------------------------------------------------------------------
+
+

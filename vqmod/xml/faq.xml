@@ -1,0 +1,63 @@
+<modification>
+
+	<id>FAQ for OpenCart 1.5.1.x</id>
+	<version>1.0.0</version>
+	<vqmver>1.2.3</vqmver>
+	<author>Fido-X</author>
+
+	<file name="admin/controller/common/header.php">
+		<operation>
+			<search position="after" index="1"><![CDATA[
+			$this->data['text_information'] = $this->language->get('text_information');
+			]]></search>
+			<add><![CDATA[
+			$this->load->language('module/faq');
+			$this->data['text_faq'] = $this->language->get('text_faq');
+			]]></add>
+		</operation>
+		<operation>
+			<search position="after" index="1"><![CDATA[
+			$this->data['zone'] = $this->url->link('localisation/zone', 'token=' . $this->session->data['token'], 'SSL');
+			]]></search>
+			<add><![CDATA[
+			$this->data['faq'] = $this->url->link('module/faq/listing', 'token=' . $this->session->data['token'], 'SSL');
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/view/template/common/header.tpl">
+		<operation>
+			<search position="after" index="1"><![CDATA[
+			<li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
+			]]></search>
+			<add><![CDATA[
+			<li><a href="<?php echo $faq; ?>"><?php echo $text_faq; ?></a></li>
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/controller/common/footer.php">
+		<operation>
+			<search position="after" index="1"><![CDATA[
+			$this->data['text_newsletter'] = $this->language->get('text_newsletter');
+			]]></search>
+			<add><![CDATA[
+			$this->load->language('information/faq');
+			$this->data['text_faq'] = $this->language->get('text_faq');
+			$this->data['faq'] = $this->url->link('information/faq');
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/view/theme/default/template/common/footer.tpl">
+		<operation>
+			<search position="before" index="1"><![CDATA[
+			<li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+			]]></search>
+			<add><![CDATA[
+			<li><a href="<?php echo $faq; ?>"><?php echo $text_faq; ?></a></li>
+			]]></add>
+		</operation>
+	</file>
+
+</modification>

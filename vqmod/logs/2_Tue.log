@@ -1,0 +1,45 @@
+---------- Date: 2016-12-20 12:32:17 ~ IP : 91.107.117.127 ----------
+REQUEST URI : /admin/index.php?route=catalog/information/update&amp;token=23798115d841df3a3aaa8b9ef9478db4&amp;information_id=55
+MOD DETAILS:
+   modFile   : /home/crimean/public_html/vqmod/xml/admin_theme_base5builder_impulsepro_1.5.4-below.xml
+   id        : Admin Theme - Base 5 Builder - ImpulsePro
+   version   : 1.0.4
+   vqmver    : 2.0
+   author    : Niyi Sodipe - Base5Builder.com
+
+File Name    : admin/view/template/catalog/information_*.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <h1><img src="view/image/information.png" alt="" /> <?php echo $heading_title; ?></h1>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-20 14:04:33 ~ IP : 80.245.123.143 ----------
+REQUEST URI : /admin/index.php?route=common/filemanager&amp;token=25eb91ab6eed900bbd9fb06674bb44a4&amp;field=more-image0
+MOD DETAILS:
+   modFile   : /home/crimean/public_html/vqmod/xml/admin_theme_base5builder_impulsepro_1.5.4-below.xml
+   id        : Admin Theme - Base 5 Builder - ImpulsePro
+   version   : 1.0.4
+   vqmver    : 2.0
+   author    : Niyi Sodipe - Base5Builder.com
+
+File Name    : admin/view/template/common/filemanager.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $button_refresh; ?></a></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-20 14:46:23 ~ IP : 80.245.123.143 ----------
+REQUEST URI : /admin/index.php?route=catalog/category/update&amp;token=25eb91ab6eed900bbd9fb06674bb44a4&amp;category_id=79
+MOD DETAILS:
+   modFile   : /home/crimean/public_html/vqmod/xml/admin_theme_base5builder_impulsepro_1.5.4-below.xml
+   id        : Admin Theme - Base 5 Builder - ImpulsePro
+   version   : 1.0.4
+   vqmver    : 2.0
+   author    : Niyi Sodipe - Base5Builder.com
+
+File Name    : admin/view/template/catalog/category_*.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <h1><img src="view/image/category.png" alt="" /> <?php echo $heading_title; ?></h1>
+
+----------------------------------------------------------------------
+
+
